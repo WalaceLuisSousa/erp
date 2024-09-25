@@ -16,7 +16,7 @@
         </nav>
     </header>
     <main>
-        
+
         <h2 class="titulo-produtos">Lista de Produtos</h2>
         <form class="formulario-produto">
             <label for="nomeProduto" class="rotulo-produto">Nome do Produto:</label>
@@ -33,10 +33,8 @@
                 <option value="basico">Básico</option>
             </select>
         
-            <button type="button" class="botao-adicionar">Adicionar Produto</button>
+            <button onclick="adicionarProduto()" id="adicionarBtn" class="botao-adicionar">Adicionar Produto</button>
         </form>
-        
-        <button onclick="adicionarProduto()">Adicionar Produto</button>
         
         <div class="tabelasProdutos" id="tabelasProdutos">
             <h3>Frutas e Legumes</h3>

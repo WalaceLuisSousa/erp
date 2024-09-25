@@ -1,4 +1,4 @@
-// Classe produto
+// Classe Produto
 class Product {
     constructor(nome, valor, categoria) {
         this.nome = nome; // Nome do produto
@@ -45,7 +45,6 @@ function adicionarProdutoNaTabela(produto) {
     tableBody.appendChild(row);
 }
 
-
 // Função para salvar produtos no localStorage
 function saveToLocalStorage(key, value) {
     let items = JSON.parse(localStorage.getItem(key)) || [];
@@ -67,7 +66,7 @@ function editarProduto(nome, valor, categoria) {
     document.getElementById('nomeProduto').value = nome;
     document.getElementById('valorProduto').value = valor;
     document.getElementById('categoria').value = categoria;
-    document.getElementById('adicionarBtn').textContent = "Atualizar Produto";
+    document.getElementById('adicionarBtn').textContent = "Atualizar Produto"; // A referência ao botão deve existir
 }
 
 // Função para atualizar um produto
@@ -105,7 +104,7 @@ function resetForm() {
     document.getElementById('nomeProduto').value = '';
     document.getElementById('valorProduto').value = '';
     produtoEditando = null;
-    document.getElementById('adicionarBtn').textContent = "Adicionar Produto";
+    document.getElementById('adicionarBtn').textContent = "Adicionar Produto"; // Certifique-se de que o botão exista
 }
 
 // Carregar produtos do localStorage ao abrir a página
