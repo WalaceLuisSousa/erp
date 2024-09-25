@@ -16,20 +16,25 @@
         </nav>
     </header>
     <main>
-        <h2>Lista de Produtos</h2>
-        <label for="nomeProduto">Nome do Produto:</label>
-        <input type="text" id="nomeProduto" placeholder="Nome do Produto">
         
-        <label for="valorProduto">Valor do Produto:</label>
-        <input type="number" id="valorProduto" placeholder="Valor do produto">
+        <h2 class="titulo-produtos">Lista de Produtos</h2>
+        <form class="formulario-produto">
+            <label for="nomeProduto" class="rotulo-produto">Nome do Produto:</label>
+            <input type="text" id="nomeProduto" class="campo-produto" placeholder="Nome do Produto">
         
-        <label for="categoria">Categoria:</label>
-        <select id="categoria" name="categoria">
-            <option value="flv">Frutas e Legumes</option>
-            <option value="bebidas">Bebidas</option>
-            <option value="frios">Frios</option>
-            <option value="basico">Básico</option>
-        </select>
+            <label for="valorProduto" class="rotulo-produto">Valor do Produto:</label>
+            <input type="number" id="valorProduto" class="campo-produto" placeholder="Valor do produto">
+        
+            <label for="categoria" class="rotulo-produto">Categoria:</label>
+            <select id="categoria" name="categoria" class="selecionar-produto">
+                <option value="flv">Frutas e Legumes</option>
+                <option value="bebidas">Bebidas</option>
+                <option value="frios">Frios</option>
+                <option value="basico">Básico</option>
+            </select>
+        
+            <button type="button" class="botao-adicionar">Adicionar Produto</button>
+        </form>
         
         <button onclick="adicionarProduto()">Adicionar Produto</button>
         

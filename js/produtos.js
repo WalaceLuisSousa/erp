@@ -35,15 +35,16 @@ function adicionarProdutoNaTabela(produto) {
     const tableBody = document.querySelector(`#table-${produto.categoria} tbody`);
     const row = document.createElement('tr');
     row.innerHTML = `
-        <td>${produto.nome}</td>
-        <td>R$ ${parseFloat(produto.valor).toFixed(2)}</td>
-        <td>
+        <td style="width: 40%;">${produto.nome}</td>
+        <td style="width: 30%;">R$ ${parseFloat(produto.valor).toFixed(2)}</td>
+        <td style="width: 30%;">
             <button class="botaoEditar" onclick="editarProduto('${produto.nome}', '${produto.valor}', '${produto.categoria}')">Editar</button>
             <button class="botaoDeletar" onclick="deletarProduto('${produto.nome}', '${produto.categoria}')">Excluir</button>
         </td>
     `;
     tableBody.appendChild(row);
 }
+
 
 // Função para salvar produtos no localStorage
 function saveToLocalStorage(key, value) {

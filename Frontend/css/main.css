@@ -1,8 +1,9 @@
 :root {
     --cor-principal: #4298f4;
-    --cor-secundaria: red;
+    --cor-secundaria: rgb(255, 255, 255);
     --cor-body: white;
     --cor-fonte: black;
+    --cor-placeholder: #888;
     --background-image: url('../imagens/backgroundImg.avif');
 }
 
