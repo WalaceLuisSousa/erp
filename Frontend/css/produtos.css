@@ -1,0 +1,68 @@
+@import url('./main.css');
+
+.botaoEditar,
+.botaoDeletar{
+    padding: 5px 5px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.botaoEditar {
+    background-color: #ffc107; 
+    color: white; /* Cor do texto */
+}
+
+.botaoEditar:hover {
+    background-color: #e0a800; 
+    transform: scale(1.05); 
+}
+
+.botaoDeletar {
+    background-color: #dc3545; 
+    color: white; /* Cor do texto */
+}
+
+.botaoDeletar:hover {
+    background-color: #c82333; 
+    transform: scale(1.05); 
+}
+
+.tabelasProdutos {
+    max-width: 1200px;
+    margin: 0 auto; 
+}
+
+.tabelasProdutos h3 {
+    margin-top: 30px;
+}
+
+.tabelasProdutos table {
+    width: 100%;
+    border-collapse: collapse; 
+    margin-bottom: 20px; 
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tabelasProdutos th, td {
+    border: 1px solid #ccc; 
+    padding: 12px; 
+    text-align: left; 
+}
+
+.tabelasProdutos th {
+    background-color: var(--cor-principal);/* Cor de fundo dos cabeçalhos */
+    color: white; /* Cor do texto dos cabeçalhos */
+}
+
+.tabelasProdutos button {
+    padding: 5px 10px; /* Espaçamento interno dos botões */
+    border: none; /* Sem borda */
+    border-radius: 4px; /* Cantos arredondados */
+    cursor: pointer; /* Cursor de mão ao passar o mouse */
+    font-size: 14px; /* Tamanho da fonte dos botões */
+}

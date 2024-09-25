@@ -1,0 +1,78 @@
+@import url('./main.css');
+
+.dashboard-section {
+    margin-bottom: 30px;
+}
+
+.dashboard-cards {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    background: #f1f1f1;
+    padding: 20px;
+    border-radius: 5px;
+    width: 30%;
+    text-align: center;
+}
+
+.charts-section {
+    margin: 30px 0;
+}
+
+.table-section {
+    margin-top: 20px;
+}
+
+.table-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    background-color: white; /* Fundo da tabela */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+.table-section th, .table-section td {
+    color: var(--cor-fonte);
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+.table-section th {
+    color: white;
+}
+
+.table-section tr:hover {
+    background-color: #f1f1f1; /* Efeito hover nas linhas */
+}
+
+.table-section .actions button {
+    background-color: #28a745; /* Verde para editar */
+    border: none;
+    padding: 5px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.table-section .actions button:hover {
+    background-color: #218838; /* Efeito hover para editar */
+}
+
+.table-section .delete-button {
+    background-color: #dc3545; /* Vermelho para excluir */
+}
+
+.table-section .delete-button:hover {
+    background-color: #c82333; /* Efeito hover para excluir */
+}
+
+.table-section .edit-button {
+    background-color: #ffc107; /* Amarelo para editar */
+}
+
+.table-section .edit-button:hover {
+    background-color: #e0a800; /* Efeito hover para editar */
+}
