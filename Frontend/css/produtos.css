@@ -55,8 +55,8 @@
 }
 
 .tabelasProdutos th {
-    background-color: var(--cor-principal);/* Cor de fundo dos cabeçalhos */
-    color: white; /* Cor do texto dos cabeçalhos */
+    background-color: white;/* Cor de fundo dos cabeçalhos */
+    color: rgb(0, 0, 0); /* Cor do texto dos cabeçalhos */
 }
 
 .tabelasProdutos button {

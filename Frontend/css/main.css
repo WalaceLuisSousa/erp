@@ -1,9 +1,9 @@
 :root {
-    --cor-principal: #007BFF;
+    --cor-principal: #4298f4;
     --cor-secundaria: red;
     --cor-body: white;
     --cor-fonte: black;
-   /* --cor-background : */
+    --background-image: url('../imagens/backgroundImg.avif');
 }
 
 body {
@@ -12,18 +12,22 @@ body {
     padding: 0;
     background-color: var(--cor-body);
     color: var(--cor-fonte);
+    background-image: var(--background-image);
+    background-size: cover; /* Ajusta a imagem para cobrir todo o elemento */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
 }
 
 header {
     background: var(--cor-principal);
-    color: white;
+    color: rgb(0, 0, 0);
     padding: 10px;
     text-align: center;
 }
 
 nav a {
     margin: 0 15px;
-    color: white;
+    color: rgb(0, 0, 0);
     text-decoration: none;
 }
 
