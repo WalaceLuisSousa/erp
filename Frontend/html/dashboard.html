@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>ERP - Dashboard</title>
+</head>
+<body>
+    <header>
+        <h1>Dashboard</h1>
+        <nav>
+            <a href="../../index.html">Home</a>
+            <a href="./produtos.html">Produtos</a>
+            <a href="./clientes.html">Clientes</a>
+        </nav>
+    </header>
+    <main>
+        <section class="dashboard-section">
+            <h2>Visão Geral</h2>
+            <div class="dashboard-cards">
+                <div class="card">
+                    <h3>Total de Produtos</h3>
+                    <p id="totalProducts">0</p>
+                </div>
+                <div class="card">
+                    <h3>Total de Clientes</h3>
+                    <p id="totalClients">0</p>
+                </div>
+                <div class="card">
+                    <h3>Vendas do Mês</h3>
+                    <p id="monthlySales">R$ 0,00</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="charts-section">
+            <h2>Gráficos</h2>
+            <canvas id="productChart"></canvas>
+            <canvas id="clientChart"></canvas>
+        </section>
+
+        <section class="table-section">
+            <h2>Últimos Produtos Adicionados</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome do Produto</th>
+                        <th>Data de Adição</th>
+                    </tr>
+                </thead>
+                <tbody id="productTableBody">
+                    <!-- Dados serão preenchidos via JavaScript -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="../../js/dashboard.js"></script>
+</body>
+</html>

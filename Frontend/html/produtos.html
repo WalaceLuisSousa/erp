@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Produtos</title>
+</head>
+<body>
+    <header>
+        <h1>Gerenciamento de Produtos</h1>
+        <nav>
+            <a href="../../index.html">Home</a>
+            <a href="./produtos.html">Produtos</a>
+            <a href="./clientes.html">Clientes</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Lista de Produtos</h2>
+        <label for="nomeProduto">Nome do Produto:</label>
+        <input type="text" id="nomeProduto" placeholder="Nome do Produto">
+        
+        <label for="valorProduto">Valor do Produto:</label>
+        <input type="number" id="valorProduto" placeholder="Valor do produto">
+        
+        <label for="categoria">Categoria:</label>
+        <select id="categoria" name="categoria">
+            <option value="flv">Frutas e Legumes</option>
+            <option value="bebidas">Bebidas</option>
+            <option value="frios">Frios</option>
+            <option value="basico">Básico</option>
+        </select>
+        
+        <button onclick="adicionarProduto()">Adicionar Produto</button>
+        
+        <div class="tabelasProdutos" id="tabelasProdutos">
+            <h3>Frutas e Legumes</h3>
+            <table id="table-flv">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Valor</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+            <h3>Bebidas</h3>
+            <table id="table-bebidas">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Valor</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+            <h3>Frios</h3>
+            <table id="table-frios">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Valor</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+            <h3>Básico</h3>
+            <table id="table-basico">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Valor</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </main>
+    <script src="../../js/produtos.js"></script>
+</body>
+</html>

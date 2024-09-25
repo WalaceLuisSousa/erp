@@ -1,0 +1,29 @@
+:root {
+    --cor-principal: #007BFF;
+    --cor-secundaria: red;
+    --cor-body: white;
+    --cor-fonte: black;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --cor-principal: #333333; /* Cor de fundo escura */
+        --cor-body: black;
+        --cor-fonte: white;
+    }
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--cor-body);
+    color: var(--cor-fonte);
+}
+
+header {
+    background: var(--cor-principal);
+    color: white;
+    padding: 10px;
+    text-align: center;
+}

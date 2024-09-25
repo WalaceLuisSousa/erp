@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Clientes</title>
+</head>
+<body>
+    <header>
+        <h1>Gerenciamento de Clientes</h1>
+        <nav>
+            <a href="../../index.html">Home</a>
+            <a href="./produtos.html">Produtos</a>
+            <a href="./clientes.html">Clientes</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Lista de Clientes</h2>
+        <input type="text" id="clientName" placeholder="Nome do Cliente">
+        <input type="date" id="clientBirthday" placeholder="Data de Nascimento">
+        <button onclick="addClient()">Adicionar Cliente</button>
+        <ul id="clientList"></ul>
+    </main>
+    <script src="../../js/cliente.js"></script>
+    <script src="../../js/script.js"></script>
+</body>
+</html>
