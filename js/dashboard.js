@@ -1,21 +1,29 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Atualizando contadores
-    document.getElementById('totalProducts').textContent = JSON.parse(localStorage.getItem('products')).length || 0;
-    document.getElementById('totalClients').textContent = JSON.parse(localStorage.getItem('clients')).length || 0;
-    document.getElementById('monthlySales').textContent = `R$ ${Math.random() * 10000}.00`; // Simulação de vendas
+    let produtos = JSON.parse(localStorage.getItem('produtos'));
+    
+    document.getElementById('totalProducts').textContent = produtos.length || 0;
+    document.getElementById('totalClients').textContent = JSON.parse(localStorage.getItem('clientes')).length || 0;
+    document.getElementById('monthlySales').textContent = `R$157,00`; // Simulação de vendas
 
-    // Configuração do gráfico de produtos
+function quantidadeCategoria(){
+   produtos.forEach( produto=> {
+    console.log(produto.categoria)
+   });
+
+}  
+
+quantidadeCategoria()
     const ctxProduct = document.getElementById('productChart').getContext('2d');
     const productChart = new Chart(ctxProduct, {
         type: 'bar',
         data: {
-            labels: ['Produto A', 'Produto B', 'Produto C'], // Exemplos
+            labels: ['flv', 'bebidas', 'frios', 'basico'], // Exemplos
             datasets: [{
                 label: 'Quantidade',
-                data: [12, 19, 3], // Exemplos de dados
+                data: [ 10, 5, 7,5], // Exemplos de dados
                 backgroundColor: 'rgba(75, 192, 192, 0.2)',
                 borderColor: 'rgba(75, 192, 192, 1)',
-                borderWidth: 1
+                borderWidth: 2
             }]
         },
         options: {
@@ -24,22 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     beginAtZero: true
                 }
             }
-        }
-    });
-
-    // Configuração do gráfico de clientes
-    const ctxClient = document.getElementById('clientChart').getContext('2d');
-    const clientChart = new Chart(ctxClient, {
-        type: 'line',
-        data: {
-            labels: ['Janeiro', 'Fevereiro', 'Março'], // Exemplos
-            datasets: [{
-                label: 'Clientes Ativos',
-                data: [10, 15, 8], // Exemplos de dados
-                fill: false,
-                borderColor: 'rgba(153, 102, 255, 1)',
-                tension: 0.1
-            }]
         }
     });
 

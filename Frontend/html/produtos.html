@@ -17,23 +17,23 @@
     </header>
     <main>
 
-        <h2 class="titulo-produtos">Lista de Produtos</h2>
-        <form class="formulario-produto">
-            <label for="nomeProduto" class="rotulo-produto">Nome do Produto:</label>
-            <input type="text" id="nomeProduto" class="campo-produto" placeholder="Nome do Produto">
+        <h2 class="tituloProdutos">Lista de Produtos</h2>
+        <form class="formularioProduto" onsubmit="adicionarProduto(event)">
+            <label for="nomeProduto" class="rotuloProduto">Nome do Produto:</label>
+            <input type="text" id="nomeProduto" class="campoProduto" placeholder="Nome do Produto" required>
         
-            <label for="valorProduto" class="rotulo-produto">Valor do Produto:</label>
-            <input type="number" id="valorProduto" class="campo-produto" placeholder="Valor do produto">
-        
-            <label for="categoria" class="rotulo-produto">Categoria:</label>
-            <select id="categoria" name="categoria" class="selecionar-produto">
+            <label for="valorProduto" class="rotuloProduto">Valor do Produto:</label>
+            <input type="text" id="valorProduto" class="campoProduto" placeholder="Valor do produto" required>
+
+            <label for="categoria" class="rotuloProduto">Categoria:</label>
+            <select id="categoria" name="categoria" class="selecionarProduto" required>
                 <option value="flv">Frutas e Legumes</option>
                 <option value="bebidas">Bebidas</option>
                 <option value="frios">Frios</option>
                 <option value="basico">Básico</option>
             </select>
         
-            <button onclick="adicionarProduto()" id="adicionarBtn" class="botao-adicionar">Adicionar Produto</button>
+            <button type="submit" id="adicionarBtn" class="botaoAdicionar">Adicionar Produto</button>
         </form>
         
         <div class="tabelasProdutos" id="tabelasProdutos">

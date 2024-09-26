@@ -1,28 +1,28 @@
 @import url('./main.css');
 
-.titulo-produtos {
+.tituloProdutos {
     text-align: center;
     color: var(--cor-fonte);
     margin-bottom: 20px;
 }
 
-.formulario-produto {
-    max-width: 600px; /* Largura máxima do formulário */
-    margin: 20px auto; /* Centraliza o formulário */
-    padding: 20px; /* Espaçamento interno */
-    background-color: white; /* Fundo branco */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    border-radius: 8px; /* Cantos arredondados */
+.formularioProduto {
+    max-width: 600px;
+    margin: 20px auto; 
+    padding: 20px; 
+    background-color: white; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px;
 }
 
-.rotulo-produto {
+.rotuloProduto {
     display: block; 
     margin-bottom: 8px;
     font-weight: bold;
     color: var(--cor-fonte);
 }
 
-.campo-produto, .selecionar-produto {
+.campoProduto, .selecionarProduto {
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -33,12 +33,12 @@
     background-color: #f8f9fa;
 }
 
-.campo-produto::placeholder {
+.campoProduto::placeholder {
     color: var(--cor-placeholder); 
 }
 
 
-.selecionar-produto {
+.selecionarProduto {
     appearance: none;
     background: url('data:image/svg+xml;utf8,<svg fill="%23888" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 10px center;
     background-color: #f8f9fa; 
@@ -49,7 +49,7 @@
     color: var(--cor-placeholder);
 }
 
-.botao-adicionar {
+.botaoAdicionar {
     width: 100%; 
     padding: 10px;
     background-color: #28a745;
@@ -61,7 +61,7 @@
     transition: background-color 0.3s, transform 0.2s; 
 }
 
-.botao-adicionar:hover {
+.botaoAdicionar:hover {
     background-color: #218838; 
     transform: scale(1.05); 
 }
@@ -79,7 +79,7 @@
 
 .botaoEditar {
     background-color: #ffc107; 
-    color: white; /* Cor do texto */
+    color: white; 
 }
 
 .botaoEditar:hover {
@@ -89,7 +89,7 @@
 
 .botaoDeletar {
     background-color: #dc3545; 
-    color: white; /* Cor do texto */
+    color: white; 
 }
 
 .botaoDeletar:hover {

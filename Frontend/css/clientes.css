@@ -1,2 +1,7 @@
 @import url('./main.css');
 
+.titulo- {
+    text-align: center;
+    color: var(--cor-fonte);
+    margin-bottom: 20px;
+}

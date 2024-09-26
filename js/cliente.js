@@ -28,7 +28,7 @@ function addClient() {
         document.getElementById('clientBirthday').value = '';
 
         // Armazenar no localStorage
-        saveToLocalStorage('clients', newClient);
+        saveToLocalStorage('clientes', newClient);
     } else {
         alert("Por favor, insira o nome e a data de aniversário do cliente.");
     }
@@ -41,8 +41,8 @@ function saveToLocalStorage(key, value) {
 }
 
 function loadClients() {
-    const clients = JSON.parse(localStorage.getItem('clients')) || [];
-    clients.forEach(clientData => {
+    const clientes = JSON.parse(localStorage.getItem('clientes')) || [];
+    clientes.forEach(clientData => {
         const client = new Client(clientData.name, clientData.birthday);
         const li = document.createElement('li');
         li.textContent = `${client.name} - Aniversário: ${client.getFormattedBirthday()}`;

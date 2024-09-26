@@ -10,12 +10,13 @@ class Product {
 let produtoEditando = null;
 
 // Função para adicionar um produto à lista
-function adicionarProduto() {
+function adicionarProduto(event) {
+    event.preventDefault(); // Previne o comportamento padrão do formulário
     const nomeProduto = document.getElementById('nomeProduto').value;
-    const valorProduto = document.getElementById('valorProduto').value;
+    const valorProduto = document.getElementById('valorProduto').value.replace(',', '.'); // Substitui vírgula por ponto
     const categoriaProduto = document.getElementById('categoria').value;
 
-    if (nomeProduto && valorProduto) {
+    if (nomeProduto && valorProduto && !isNaN(parseFloat(valorProduto)) && isFinite(valorProduto)) {
         const produto = new Product(nomeProduto, valorProduto, categoriaProduto);
         if (produtoEditando) {
             updateProduct(produto);
@@ -26,7 +27,7 @@ function adicionarProduto() {
 
         resetForm();
     } else {
-        alert("Por favor, insira o nome e o valor do produto.");
+        alert("Por favor, insira um nome e um valor numérico válido para o produto.");
     }
 }
 
