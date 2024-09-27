@@ -1,37 +1,52 @@
 class Client {
-    constructor(name, birthday, email, telefone, endereco) {
-        this.name = name;
-        this.birthday = birthday;
-        this.email = email;
-        this.telefone = telefone;
-        this.endereco = endereco;
+    constructor(nome, aniversario, genero) {
+        this.nome = nome;
+        this.aniversario = aniversario;
+        this.genero = genero;
     }
     
     getFormattedBirthday() {
-        return new Date(this.birthday).toLocaleDateString();
+        return new Date(this.aniversario).toLocaleDateString();
     }
 }
 
 
 
-function addClient() {
-    const clientName = document.getElementById('clientName').value;
-    const clientBirthday = document.getElementById('clientBirthday').value;
+function addClient(event) {
+    const nomeCliente = document.getElementById('nomeCliente').value;
+    const clienteAniversario = document.getElementById('clienteAniversario').value;
+    const Clientegenero = document.getElementById('Clientegenero').value;
 
-    if (clientName && clientBirthday) {
-        const newClient = new Client(clientName, clientBirthday);
+    if (nomeCliente && clienteAniversario && Clientegenero) {
+        const newClient = new Client(nomeCliente, clienteAniversario, Clientegenero);
         const clientList = document.getElementById('clientList');
         const li = document.createElement('li');
         li.textContent = `${newClient.name} - Aniversário: ${newClient.getFormattedBirthday()}`;
         clientList.appendChild(li);
-        document.getElementById('clientName').value = '';
-        document.getElementById('clientBirthday').value = '';
+        document.getElementById('nomeCliente').value = '';
+        document.getElementById('clienteAniversario').value = '';
+        document.getElementById('Clientegenero').value = '';
+        
 
         // Armazenar no localStorage
         saveToLocalStorage('clientes', newClient);
     } else {
         alert("Por favor, insira o nome e a data de aniversário do cliente.");
     }
+}
+
+function adicionarClienteNaTabela(clientes) {
+    const tableBody = document.querySelector(`#table-${clientes} tbody`);
+    const row = document.createElement('tr');
+    row.innerHTML = `
+        <td style="width: 40%;">${cliente.nome}</td>
+        <td style="width: 30%;">R$ ${parseFloat(cliente.aniversario)}</td>
+        <td style="width: 30%;">R$ ${parseFloat(cliente.genero)}</td>
+        <td style="width: 30%;">
+            <button class="botaoDeletar" onclick="deletarProduto('${cliente.nome}', '${produto.categoria}')">Excluir</button>
+        </td>
+    `;
+    tableBody.appendChild(row);
 }
 
 function saveToLocalStorage(key, value) {
@@ -43,9 +58,9 @@ function saveToLocalStorage(key, value) {
 function loadClients() {
     const clientes = JSON.parse(localStorage.getItem('clientes')) || [];
     clientes.forEach(clientData => {
-        const client = new Client(clientData.name, clientData.birthday);
+        const client = new Client(clientData.nome, clientData.aniversario, clientData.genero);
         const li = document.createElement('li');
-        li.textContent = `${client.name} - Aniversário: ${client.getFormattedBirthday()}`;
+        li.textContent = `${client.nome} - Aniversário: ${client.getFormattedBirthday()} - Genero: ${client.genero} `;
         document.getElementById('clientList').appendChild(li);
     });
 }

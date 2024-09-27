@@ -16,11 +16,36 @@
         </nav>
     </header>
     <main>
-        <h2>Lista de Clientes</h2>
-        <input type="text" id="clientName" placeholder="Nome do Cliente">
-        <input type="date" id="clientBirthday" placeholder="Data de Nascimento">
-        <button onclick="addClient()">Adicionar Cliente</button>
-        <ul id="clientList"></ul>
+        <h2 class="tituloClientes" >Lista de Clientes</h2>
+        <form class="formularioCliente" onsubmit="addClient(event)">
+            <label for="nomeCliente" class="nomeCliente">Nome do Cliente</label>
+            <input type="text" id="nomeCliente" class="campoCliente" placeholder="Nome do Cliente" required>
+
+            <label for="clienteNascimento" class="nomeCliente">Data de Nascimento</label>
+            <input type="date" id="clienteAniversario" class="campoCliente" required>
+
+            <Label for="clienteGenero" class="nomeCliente">Genero</Label>
+            <select id="Clientegenero" name="Clientegenero" class="selecionarGenero" required>
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+                <option value="machu">Machu</option>
+            </select>
+            <button type="submit" id="adicionarBtn" class="botaoAdicionar" >Adicionar Cliente</button>
+        </form>
+
+        <div class="tabelasCliente" id="clientList">
+            <h3>Clientes Cadastrados</h3>
+            <table id="table-cliente">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Nascimento</th>
+                        <th>Genero</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
     </main>
     <script src="../../js/cliente.js"></script>
     <script src="../../js/script.js"></script>

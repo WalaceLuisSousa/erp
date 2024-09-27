@@ -1,7 +1,89 @@
 @import url('./main.css');
 
-.titulo- {
+.tituloClientes{
     text-align: center;
     color: var(--cor-fonte);
     margin-bottom: 20px;
+}
+
+.formularioCliente {
+    max-width: 600px;
+    margin: 20px auto; 
+    padding: 20px; 
+    background-color: white; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px;
+}
+
+.rotuloProduto {
+    max-width: 600px;
+    margin: 20px auto; 
+    padding: 20px; 
+    background-color: white; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    border-radius: 8px;
+}
+
+.campoCliente, .selecionarGenero {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    font-size: 16px; 
+    background-color: #f8f9fa;
+}
+
+.campoCliente::placeholder {
+    color: var(--cor-placeholder); 
+}
+
+.selecionarGenero {
+    appearance: none;
+    background: url('data:image/svg+xml;utf8,<svg fill="%23888" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 10px center;
+    background-color: #f8f9fa; 
+    padding-right: 40px; 
+}
+
+.nomeCliente {  
+    display: block; 
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--cor-fonte);
+}
+
+.tabelasCliente table {
+    width: 100%; 
+    border-collapse: collapse; 
+    margin-bottom: 20px; 
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    table-layout: fixed; 
+}
+
+.tabelasCliente th, td {
+    border: 1px solid #ccc;
+    padding: 12px; 
+    text-align: left;
+    word-wrap: break-word;
+}
+
+.tabelasCliente th {
+    background-color: #f8f9fa;
+    color: #343a40; 
+    text-align: center;
+}
+
+.tabelasCliente td {
+    text-align: center;
+}
+
+
+.tabelasCliente button {
+    padding: 5px 10px;
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    font-size: 14px;
 }
