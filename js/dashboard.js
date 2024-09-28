@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     document.getElementById('totalProducts').textContent = produtos.length || 0;
     document.getElementById('totalClients').textContent = JSON.parse(localStorage.getItem('clientes')).length || 0;
-    document.getElementById('monthlySales').textContent = `R$157,00`; // Simulação de vendas
+    document.getElementById('monthlySales').textContent = `R$157,00`; 
 
     let categoriesCount = {
         flv: 0,

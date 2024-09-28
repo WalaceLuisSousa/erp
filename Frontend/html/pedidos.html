@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Pedidos</title>
+    <link rel="stylesheet" href="../css/pedidos.css">
+</head>
+<body>
+    <header>
+        <h1>Cadastro de Pedidos</h1>
+        <nav>
+            <a href="./produtos.html">Produtos</a>
+            <a href="./clientes.html">Clientes</a>
+            <a href="./dashboard.html">Dashboard</a>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section id="pedidos">
+            <h2>Cadastro de Pedidos</h2>
+            <form id="formPedidos">
+                <label for="clientePedido">Cliente:</label>
+                <select id="clientePedido" name="clientePedido">
+                    <!-- Opções de clientes serão preenchidas dinamicamente -->
+                </select>
+                <label for="produtoPedido">Produto:</label>
+                <select id="produtoPedido" name="produtoPedido">
+                    <!-- Opções de produtos serão preenchidas dinamicamente -->
+                </select>
+                <label for="quantidadePedido">Quantidade:</label>
+                <input type="number" id="quantidadePedido" name="quantidadePedido" required min="1">
+                <button type="button" onclick="adicionarPedido()">Adicionar Pedido</button>
+            </form>
+
+            <div id="listaPedidos"></div>
+
+            <!-- Botão para fechar o pedido e gerar o arquivo .txt -->
+            <button type="button" onclick="fecharPedido()">Fechar Pedido e Gerar TXT</button>
+        </section>
+    </main>
+
+    <script src="../../js/pedidos.js"></script>
+</body>
+</html>

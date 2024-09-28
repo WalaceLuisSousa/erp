@@ -1,0 +1,58 @@
+@import url('./main.css');
+
+form {
+    margin-bottom: 2rem;
+}
+
+form label {
+    display: block;
+    margin-top: 1rem;
+}
+
+form select,
+form input,
+form button {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+#listaPedidos {
+    border-top: 1px solid #ccc;
+    padding-top: 1rem;
+}
+
+.pedido {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.pedido span {
+    display: inline-block;
+    flex: 1;
+}
+
+.pedido button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.pedido button:hover {
+    background-color: #d32f2f;
+}
