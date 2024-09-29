@@ -46,11 +46,24 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     
     // Preencher tabela com produtos
-    const products = JSON.parse(localStorage.getItem('products')) || [];
+    const products = JSON.parse(localStorage.getItem('produtos')) || [];
     const productTableBody = document.getElementById('productTableBody');
-    products.forEach(product => {
+    const ultimosProdutos = products.slice(-5);
+
+    ultimosProdutos.forEach(produtos => {
         const row = document.createElement('tr');
-        row.innerHTML = `<td>${product}</td><td>${new Date().toLocaleDateString()}</td>`; // Data atual como exemplo
+        row.innerHTML = `<td>${produtos.nome}</td><td>${new Date().toLocaleDateString()}</td>`;
         productTableBody.appendChild(row);
     });
+
+    const clients = JSON.parse(localStorage.getItem('clientes')) || [];
+    const clienteTableBody = document.getElementById('clienteTableBody');
+    const ultimosClientes = clients.slice(-5);
+
+    ultimosClientes.forEach(cliente => {
+        const row = document.createElement('tr');
+        row.innerHTML = `<td>${cliente.nome}</td>`;
+        clienteTableBody.appendChild(row);
+    });
+
 });

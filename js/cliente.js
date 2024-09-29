@@ -29,6 +29,7 @@ function addClient(event) {
         document.getElementById('Clientegenero').value = '';
 
         saveToLocalStorage('clientes', newClient);
+
     } else {
         alert("Por favor, insira o nome e a data de aniversário do cliente.");
     }
