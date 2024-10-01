@@ -1,14 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+
 :root {
-    --cor-principal: #4298f4;
+    --cor-principal: linear-gradient(135deg, #4298f4, #1a73e8);
     --cor-secundaria: rgb(255, 255, 255);
-    --cor-body: white;
-    --cor-fonte: black;
+    --cor-body: rgba(255, 255, 255, 0.9);
+    --cor-fonte: #333;
     --cor-placeholder: #888;
     --background-image: url('../imagens/backgroundImg.avif');
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Russo One', sans-serif;
     margin: 0;
     padding: 0;
     background-color: var(--cor-body);
@@ -17,47 +19,62 @@ body {
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
+    filter: blur(0px); /* Pode ajustar para dar um efeito */
 }
 
 header {
     background: var(--cor-principal);
     color: rgb(0, 0, 0);
-    padding: 10px;
+    padding: 20px;
     text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px; 
+}
+
+header h1 {
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+    font-size: 2.5em;
 }
 
 nav a {
     margin: 0 15px;
     color: rgb(0, 0, 0);
     text-decoration: none;
+    transition: color 0.3s;
 }
 
 nav a:hover {
+    color: var(--cor-principal);
     text-decoration: underline;
 }
 
 main {
     padding: 20px;
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
 }
 
 .botaoAdicionar {
     width: 100%; 
-    padding: 10px;
+    padding: 12px;
     background-color: #28a745;
     color: white; 
     border: none; 
-    border-radius: 4px; 
+    border-radius: 8px; 
     cursor: pointer;
     font-size: 16px; 
-    transition: background-color 0.3s, transform 0.2s; 
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .botaoAdicionar:hover {
     background-color: #218838; 
     transform: scale(1.05); 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5); 
 }
 
 #clienteGenero {
     color: var(--cor-placeholder);
+    font-style: italic; 
 }
-

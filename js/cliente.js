@@ -6,35 +6,29 @@ class Client {
     }
     
     getFormattedBirthday() {
-        return new Date(this.aniversario).toLocaleDateString();
+        return new Date(this.aniversario).toLocaleDateString('pt-BR');
     }
 }
-
-
 
 function addClient(event) {
     event.preventDefault();
 
     const nomeCliente = document.getElementById('nomeCliente').value;
     const clienteAniversario = document.getElementById('clienteAniversario').value;
-    const Clientegenero = document.getElementById('Clientegenero').value;
+    const clienteGenero = document.getElementById('Clientegenero').value;
 
-    if (nomeCliente && clienteAniversario && Clientegenero) {
-        const newClient = new Client(nomeCliente, clienteAniversario, Clientegenero);
+    if (nomeCliente && clienteAniversario && clienteGenero) {
+        const newClient = new Client(nomeCliente, clienteAniversario, clienteGenero);
         
         adicionarClienteNaTabela(newClient);
         
-        document.getElementById('nomeCliente').value = '';
-        document.getElementById('clienteAniversario').value = '';
-        document.getElementById('Clientegenero').value = '';
+        limparFormulario();
 
         saveToLocalStorage('clientes', newClient);
-
     } else {
         alert("Por favor, insira o nome e a data de aniversário do cliente.");
     }
 }
-
 
 function adicionarClienteNaTabela(cliente) {
     const tableBody = document.querySelector('#table-cliente tbody');
@@ -43,6 +37,9 @@ function adicionarClienteNaTabela(cliente) {
         <td>${cliente.nome}</td>
         <td>${cliente.getFormattedBirthday()}</td>
         <td>${cliente.genero}</td>
+        <td>
+            <button onclick="deleteClient('${cliente.nome}')">Excluir</button>
+        </td>
     `;
     tableBody.appendChild(row);
 }
@@ -61,6 +58,18 @@ function loadClients() {
     });
 }
 
+function deleteClient(nome) {
+    let clientes = JSON.parse(localStorage.getItem('clientes')) || [];
+    clientes = clientes.filter(client => client.nome !== nome);
+    localStorage.setItem('clientes', JSON.stringify(clientes));
+    location.reload(); // Recarrega a página para atualizar a tabela
+}
+
+function limparFormulario() {
+    document.getElementById('nomeCliente').value = '';
+    document.getElementById('clienteAniversario').value = '';
+    document.getElementById('Clientegenero').value = '';
+}
 
 // Carregar clientes ao abrir a página
 document.addEventListener('DOMContentLoaded', loadClients);

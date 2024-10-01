@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('totalClients').textContent = JSON.parse(localStorage.getItem('clientes')).length || 0;
     document.getElementById('monthlySales').textContent = `R$157,00`; 
 
-    let categoriesCount = {
+    let categoriesQtd = {
         flv: 0,
         bebidas: 0,
         frios: 0,
@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
     function quantidadeCategorias() {
         produtos.forEach(produto => {
             console.log(produto.categoria);
-            if (categoriesCount.hasOwnProperty(produto.categoria)) {
-                categoriesCount[produto.categoria]++;
+            if (categoriesQtd.hasOwnProperty(produto.categoria)) {
+                categoriesQtd[produto.categoria]++;
             }
         });
     }
@@ -27,10 +27,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const productChart = new Chart(ctxProduct, {
         type: 'bar',
         data: {
-            labels: Object.keys(categoriesCount), 
+            labels: Object.keys(categoriesQtd), 
             datasets: [{
                 label: 'Quantidade',
-                data: Object.values(categoriesCount),
+                data: Object.values(categoriesQtd),
                 backgroundColor: 'rgba(75, 192, 192, 0.2)',
                 borderColor: 'rgba(75, 192, 192, 1)',
                 borderWidth: 2
