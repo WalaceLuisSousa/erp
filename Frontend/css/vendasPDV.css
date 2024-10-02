@@ -1,0 +1,112 @@
+/* Estilos gerais para o sistema de vendas */
+:root {
+    --cor-fundo-produto: rgba(255, 255, 255, 0.8);
+    --cor-titulo-produto: #1a73e8;
+    --cor-botao-pagamento: #007bff;
+    --cor-botao-cancelar: #dc3545;
+    --cor-cartao: #f8f9fa;
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.pesquisa {
+   width: 100%;
+}
+
+.produtos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+    flex: 1;
+}
+
+.card_produto {
+    background-color: var(--cor-fundo-produto);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 15px;
+    width: 180px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.3s;
+}
+
+.card_produto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card_produto img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.titulo_produto {
+    font-size: 1.5em;
+    color: var(--cor-titulo-produto);
+    margin: 10px 0;
+}
+
+.preco_produto {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.botoes_container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.botaoPagamento {
+    background-color: var(--cor-botao-pagamento);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.botaoPagamento:hover {
+    background-color: #0056b3; /* Tom mais escuro para o hover */
+}
+
+.botaoCancelar {
+    background-color: var(--cor-botao-cancelar);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.botaoCancelar:hover {
+    background-color: #c82333; /* Tom mais escuro para o hover */
+}
+
+.carrinho {
+    background-color: var(--cor-cartao);
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid blue;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin-left: 20px;
+}
+
+.carrinho h4 {
+    margin: 0 0 10px 0;
+}
+
+.carrinho p {
+    margin: 5px 0;
+    font-size: 1.2em;
+}
