@@ -89,24 +89,73 @@ main {
 }
 
 .botaoCancelar:hover {
-    background-color: #c82333; /* Tom mais escuro para o hover */
+    background-color: #c82333; 
 }
 
 .carrinho {
-    background-color: var(--cor-cartao);
-    padding: 10px;
-    border-radius: 10px;
-    border: 2px solid blue;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    background-color: #f8f9fa; 
+    padding: 20px; 
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
+    width: 320px; 
     margin-left: 20px;
+    border: 2px solid #007bff;
+    text-align: center;
 }
 
 .carrinho h4 {
-    margin: 0 0 10px 0;
+    margin: 0 0 20px 0;
+    font-weight: bold; 
+    font-size: 1.5em;
+    text-align: center;
 }
 
 .carrinho p {
-    margin: 5px 0;
-    font-size: 1.2em;
+    margin: 2px 0;
+    font-size: 1.1em; 
+    color: #333; 
+    text-align: center;
+}
+
+.pesquisa {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 8px; 
+    border: 1px solid #ced4da; 
+    border-radius: 5px; 
+    margin-bottom: 10px; 
+}
+
+.botaoPagamento, .botaoCancelar {
+    width: 48%; 
+    padding: 10px;
+    border: none;
+    border-radius: 5px; 
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s; 
+}
+
+.botaoPagamento {
+    background-color: #28a745; 
+}
+
+.botaoCancelar {
+    background-color: #dc3545; 
+}
+
+.botaoPagamento:hover {
+    background-color: #218838;
+    transform: scale(1.05); 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+}
+
+.botaoCancelar:hover {
+    background-color: #c82333; 
+    transform: scale(1.05); 
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
 }
