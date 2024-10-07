@@ -35,13 +35,19 @@
                 <label >Produto para pesquisar</label>
                 <input type="text" name="" id="">
             </div>
-
             <h4>Carrinho de Compras</h4>
             <p>Subtotal: R$ 0,00</p>
+            <div class="produtosCarrinho"></div>
             <button class="botaoPagamento">Finalizar Compra</button>
             <button class="botaoCancelar">Cancelar</button>
-        </div>
+        </div>     
     </main>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="modalMessage"></p>
+        </div>
+    </div>    
     <script src="../../js/vendasPDV.js"></script> 
 </body>
 </html>
