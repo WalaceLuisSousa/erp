@@ -11,7 +11,7 @@ function listarProdutosNaDiv() {
             <h2 class="titulo_produto">${produto.nome}</h2>
             <img src="../imagens/backgroundImg.avif" alt="${produto.nome}">
             <p class="preco_produto">R$ ${parseFloat(produto.valor).toFixed(2)}</p>
-            <h2 class="categoria_produto">Categoria: ${produto.categoria}</h2>
+            <h2 class="categoria_produto">${produto.categoria}</h2>
             <div class="botoes-container">
                 <button class="botaoAdicionar" data-produto='${JSON.stringify(produto)}'>Adicionar ao Carrinho</button>
             </div>
@@ -38,7 +38,7 @@ function adicionarCarrinho(produto) {
 
     listarCarrinhoNaDiv();
 
-    mostrarModal(`${produto.nome} foi adicionado ao carrinho!`);
+    mostrarModal(`${produto.nome}  adicionado ao carrinho com Sucesso!`);
 }
 
 function mostrarModal(mensagem) {

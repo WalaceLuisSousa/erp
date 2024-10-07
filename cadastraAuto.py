@@ -19,7 +19,7 @@ def gerar_valor_aleatorio():
 
 def executar_processo(driver):
     # Acesse o arquivo HTML local
-    driver.get('file:///C:/Users/walac/OneDrive/Área%20de%20Trabalho/erp/Frontend/html/produtos.html')
+    driver.get('file:///C:/Users/walace.medeiros/OneDrive/Área%20de%20Trabalho/erp/Frontend/html/produtos.html')
 
     # Aguarde alguns segundos para garantir que a página carregou
     time.sleep(3)
