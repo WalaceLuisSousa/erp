@@ -44,8 +44,9 @@ nav a {
 }
 
 nav a:hover {
-    color: var(--cor-principal);
     text-decoration: underline;
+    background-color: #007bff;
+    color: rgb(191, 218, 218);
 }
 
 main {
