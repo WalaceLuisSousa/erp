@@ -10,11 +10,13 @@
 }
 
 .card {
-    background: #f1f1f1;
+    background: #1a73e8;
+    color: var(--cor-secundaria);
     padding: 20px;
-    border-radius: 5px;
     width: 30%;
     text-align: center;
+    border-radius: 46px; 
+    border: 2px solid black;
 }
 
 .charts-section {

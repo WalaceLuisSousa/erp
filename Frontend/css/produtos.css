@@ -1,11 +1,5 @@
 @import url('./main.css');
 
-.tituloProdutos {
-    text-align: center;
-    color: var(--cor-fonte);
-    margin-bottom: 20px;
-}
-
 .formularioProduto {
     max-width: 600px;
     margin: 20px auto; 

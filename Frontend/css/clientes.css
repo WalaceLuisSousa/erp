@@ -1,11 +1,5 @@
 @import url('./main.css');
 
-.tituloClientes{
-    text-align: center;
-    color: var(--cor-fonte);
-    margin-bottom: 20px;
-}
-
 .formularioCliente {
     max-width: 600px;
     margin: 20px auto; 
