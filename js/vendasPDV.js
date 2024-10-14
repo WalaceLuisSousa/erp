@@ -39,7 +39,26 @@ function adicionarCarrinho(produto) {
     listarCarrinhoNaDiv();
 
     mostrarModal(`${produto.nome}  adicionado ao carrinho com Sucesso!`);
+    console.log(`${produto.nome} adicionado`);
 }
+
+function retirarCarrinho() {
+    let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+
+    if (carrinho.length > 0) {
+        const produtoRemovido = carrinho.pop(); // Remove o último produto
+
+        localStorage.setItem('carrinho', JSON.stringify(carrinho));
+        
+        listarCarrinhoNaDiv();
+        mostrarModal(`${produtoRemovido.nome} removido do carrinho com sucesso!`);
+        console.log(`${produtoRemovido.nome} removido`);
+    } else {
+        console.error('O carrinho está vazio');
+        mostrarModal('O carrinho está vazio');
+    }
+}
+
 
 function mostrarModal(mensagem) {
     const modal = document.getElementById("myModal");
