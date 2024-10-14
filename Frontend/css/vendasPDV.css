@@ -140,7 +140,7 @@ input[type="text"] {
 }
 
 .botaoPagamento, .botaoCancelar {
-    width: 48%; 
+    width: 100%; 
     padding: 10px;
     border: none;
     border-radius: 5px; 

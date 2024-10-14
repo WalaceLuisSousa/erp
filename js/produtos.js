@@ -1,6 +1,7 @@
 // Classe Produto
 class Product {
     constructor(nome, valor, categoria) {
+        this.id
         this.nome = nome; // Nome do produto
         this.valor = valor; // Valor do produto
         this.categoria = categoria; // Categoria do produto

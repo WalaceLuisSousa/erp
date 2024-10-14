@@ -59,7 +59,6 @@ function retirarCarrinho() {
     }
 }
 
-
 function mostrarModal(mensagem) {
     const modal = document.getElementById("myModal");
     const modalMessage = document.getElementById("modalMessage");
@@ -91,15 +90,23 @@ function listarCarrinhoNaDiv() {
         return;
     }
 
+    let i = 0;
+
     carrinho.forEach(produto => {
         const cardCarrinho = document.createElement('div');
         cardCarrinho.classList.add('card_carrinho');
+        cardCarrinho.id = i;
+
         cardCarrinho.innerHTML = `
+            <p>ID: ${i}</p>
             <h2 class="titulo_produto">${produto.nome}</h2>
             <p class="preco_produto">R$ ${parseFloat(produto.valor).toFixed(2)}</p>
             <h2 class="categoria_produto">Categoria: ${produto.categoria}</h2>
+            <button class="botaoCancelar" onclick="retirarCarrinho(${i})">Remover</button>
         `;
+        
         produtosCarrinhoDiv.appendChild(cardCarrinho); 
+        i++;
     });
 }
 
