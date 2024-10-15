@@ -1,5 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
-    let produtos = JSON.parse(localStorage.getItem('produtos'));
+    
+    const usuarioLogado = localStorage.getItem('usuarioLogado');
+
+    console.log(`Usuário logado: ${usuarioLogado}`);
+
+    let produtos = JSON.parse(localStorage.getItem('produtos')) || [];
     
     document.getElementById('totalProducts').textContent = produtos.length || 0;
     document.getElementById('totalClients').textContent = JSON.parse(localStorage.getItem('clientes')).length || 0;
@@ -14,7 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     function quantidadeCategorias() {
         produtos.forEach(produto => {
-            console.log(produto.categoria);
             if (categoriesQtd.hasOwnProperty(produto.categoria)) {
                 categoriesQtd[produto.categoria]++;
             }
@@ -50,9 +54,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const productTableBody = document.getElementById('productTableBody');
     const ultimosProdutos = products.slice(-5);
 
-    ultimosProdutos.forEach(produtos => {
+    ultimosProdutos.forEach(produto => {
         const row = document.createElement('tr');
-        row.innerHTML = `<td>${produtos.nome}</td><td>${new Date().toLocaleDateString()}</td>`;
+        row.innerHTML = `<td>${produto.nome}</td><td>${new Date().toLocaleDateString()}</td>`;
         productTableBody.appendChild(row);
     });
 
@@ -65,5 +69,4 @@ document.addEventListener('DOMContentLoaded', () => {
         row.innerHTML = `<td>${cliente.nome}</td>`;
         clienteTableBody.appendChild(row);
     });
-
 });

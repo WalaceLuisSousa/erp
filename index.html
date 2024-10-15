@@ -4,21 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Frontend/css/inicial.css">
-    <title>.ERP.</title>
+    <title>Login - ERP</title>
 </head>
 <body>
-    <header>
-        <h1>Bem-vindo ao ERP</h1>
-        <nav>
-            <a href="./Frontend/html/produtos.html">Produtos</a>
-            <a href="./Frontend/html/clientes.html">Clientes</a>
-            <a href="./Frontend/html/dashboard.html">Dashboard</a>
-            <a href="./Frontend/html/pedidos.html">Pedidos</a>
-            <a href="./Frontend/html/vendasPDV.html">PDV</a>
-        </nav>
-    </header>
-    <main>
-    </main>
+    <div class="login-container">
+        <h2>Login ERP</h2>
+        <form id="login_form">
+            <div class="input-group">
+                <label for="username">Usuário:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="button">Entrar</button>
+        </form>
+    </div>
     <script src="./js/script.js"></script>
+    <script src="./js/inicial.js"></script>
+    <script type="module" src="./js/inicial.js"></script>
 </body>
 </html>
