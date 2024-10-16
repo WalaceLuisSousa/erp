@@ -6,7 +6,7 @@ class Client {
     }
     
     getFormattedBirthday() {
-        return new Date(this.aniversario).toLocaleDateString('pt-BR');
+        return new Date(this.aniversario).toLocaleDateString();
     }
 }
 

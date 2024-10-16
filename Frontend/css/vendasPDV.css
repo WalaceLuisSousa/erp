@@ -13,10 +13,6 @@ main {
     padding: 20px;
 }
 
-.pesquisa {
-   width: 100%;
-}
-
 .produtos {
     display: flex;
     flex-wrap: wrap;
