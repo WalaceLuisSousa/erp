@@ -16,10 +16,26 @@ function addClient(event) {
     event.preventDefault();
 
     const nomeCliente = document.getElementById('nomeCliente').value;
-    const clienteAniversario = document.getElementById('clienteAniversario').value;
+    const clienteAniversario = new Date(document.getElementById('clienteAniversario').value);
     const clienteGenero = document.getElementById('Clientegenero').value;
 
     if (nomeCliente && clienteAniversario && clienteGenero) {
+        const dataAtual = new Date();
+
+        if (clienteAniversario > dataAtual) {
+            alert(`A data de aniversário nao pode ser maior que ${dataAtual}`);
+            return;
+        } else {
+            console.log("Data de nascimento válida");
+        }
+
+        if (clienteAniversario < Date.parse('1950-01-01')){
+            console.log('data menor que 1950');
+            return
+        }else {
+            console.log('data valida');
+        }
+
         const newClient = new Client(nomeCliente, clienteAniversario, clienteGenero);
         
         if (editingClientIndex !== null) {
@@ -28,12 +44,13 @@ function addClient(event) {
             saveToLocalStorage('clientes', newClient);
             adicionarClienteNaTabela(newClient);
         }
-
+        
         limparFormulario();
     } else {
         alert("Por favor, insira o nome e a data de aniversário do cliente.");
     }
 }
+
 
 function adicionarClienteNaTabela(cliente) {
     const tableBody = document.querySelector('#table-cliente tbody');
