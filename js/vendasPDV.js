@@ -113,4 +113,10 @@ function listarCarrinhoNaDiv() {
 document.addEventListener('DOMContentLoaded', () => {
     listarProdutosNaDiv();
     listarCarrinhoNaDiv(); 
+
+    const usuarioLogado = localStorage.getItem('usuarioLogado');
+
+    console.log(`Usuário logado: ${usuarioLogado}`);
+
+document.getElementById('mostrarUsuario').textContent = usuarioLogado || "Usuário não logado";
 });
