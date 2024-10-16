@@ -42,11 +42,11 @@ header h1 {
 }
 
 nav a {
-    margin: 0 15px;
+    margin: 1px;
     color: rgb(0, 0, 0);
     text-decoration: none;
     transition: color 0.3s;
-    border-radius: 40px 1px 40px 1px; 
+    border-radius: 5px; 
     background-color: #1a73e8; 
     border: 1px solid #000000;
 }
@@ -92,4 +92,19 @@ main {
 #clienteGenero {
     color: var(--cor-placeholder);
     font-style: italic; 
+}
+
+footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 5%;
+    padding: 10px;
+}
+
+.botaoLogout {
+    text-decoration: none;
+    padding: 10px 20px;
+    color: black;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #4298f4, #1a73e8);
 }
