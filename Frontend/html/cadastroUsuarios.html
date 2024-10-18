@@ -1,17 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuários</title>
     <link rel="stylesheet" href="../css/cadastroUsuario.css">
-    <title>Document</title>
 </head>
 <body>
-    <header>
-        <h1>Cadastro de Usuario</h1>
-        <nav>
-            <a>teste</a>
-        </nav>
-    </header>
+    <div class="container">
+        <h1>Cadastro de Usuário</h1>
+        <form action="#" method="POST">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required>
+
+            <label for="confirmar-senha">Confirmar Senha:</label>
+            <input type="password" id="confirmar-senha" name="confirmar-senha" required>
+
+            <label for="tipoUsuaro">Tipo de Usuario</label>
+            <select id="tipoUsuaro" name="tipoUsuaro" required>
+                <option value="admin">administrador</option>
+                <option value="user">Usuario</option>
+            </select>
+            <div class="bottons">
+                <button type="submit">Cadastrar</button>
+            </div>
+        </form>
+    </div>
+    <script src="../../js/cadastroUsuarios.js"></script>
 </body>
 </html>
+
