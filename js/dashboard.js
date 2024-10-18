@@ -1,18 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    const usuarioLogado = localStorage.getItem('usuarioLogado');
-
-    console.log(`Usuário logado: ${usuarioLogado}`);
-
-    const mostrarUsuario = usuarioLogado;
-
-    console.log(`mostrar usuario ${mostrarUsuario}`);
+    
 
     let produtos = JSON.parse(localStorage.getItem('produtos')) || [];
 
-    localStorage.setItem("usuarioLogado", mostrarUsuario);
-
-    document.getElementById('mostrarUsuario').textContent = mostrarUsuario;
     document.getElementById('totalProducts').textContent = produtos.length || 0;
     document.getElementById('totalClients').textContent = JSON.parse(localStorage.getItem('clientes')).length || 0;
     document.getElementById('monthlySales').textContent = `R$157,00`; 
