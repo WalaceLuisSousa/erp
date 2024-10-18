@@ -1,3 +1,3 @@
 document.addEventListener('DOMContentLoaded', () => {
-    console.log("ERP carregado.");
+    console.log("ERP Carregado com Sucesso.");
 });

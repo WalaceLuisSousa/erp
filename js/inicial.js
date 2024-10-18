@@ -1,33 +1,39 @@
-const usuarioAdm = {
-    username: 'admin',
-    password: 'admin'
-};
+// Função para carregar usuários do localStorage
+function loadUsuarios() {
+    return JSON.parse(localStorage.getItem('usuarios')) || [];
+}
 
-const usuarioPadrao = {
-    username: 'user',
-    password: 'user'
-};
+const usuarios = loadUsuarios();
+console.log(usuarios); // Verifique se os usuários estão carregados corretamente
 
+
+// Evento de submit do formulário de login
 document.getElementById('login_form').addEventListener('submit', function(event) {
     event.preventDefault();
     
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
-    const usuarioLogado = localStorage.getItem('usuarioLogado');
+    const username = document.getElementById('username').value.trim(); // Remove espaços
+    const password = document.getElementById('password').value.trim(); // Remove espaços
 
-    if  (username === usuarioAdm.username && password === usuarioAdm.password) {
-        console.log('logado como adm');
-        localStorage.setItem('usuarioLogado', 'admin');
+    const usuarios = loadUsuarios();
+    console.log(usuarios); // Verifique a estrutura dos usuários
+
+    // Verificação se o usuário existe
+    const usuarioEncontrado = usuarios.find(usuario => {
+        console.log(`Comparando: ${usuario.nome} com ${username} e ${usuario.senha} com ${password}`);
+        return usuario.email === username || usuario.senha === password; // Qualquer um pode ser igual
+    });
+
+    if (usuarioEncontrado) {
+        console.log(`Logado como ${usuarioEncontrado.tipo}`);
+        localStorage.setItem('usuarioLogado', usuarioEncontrado.tipo);
         window.location.href = "./Frontend/html/dashboard.html";
         alert('Login bem-sucedido!');
-        }
-    if (username === usuarioPadrao.username && password === usuarioPadrao.password){
-        console.log('logado como user')
-        localStorage.setItem('usuarioLogado', 'user');
-        window.location.href = "./Frontend/html/dashboard.html";
-        alert(`Bem-vindo, ${usuarioLogado}!`);
-    }
-    else {
+    } else {
         document.getElementById('message').textContent = 'Nome de usuário ou senha incorretos.';
     }
+});
+
+// Evento para redirecionar para a página de cadastro
+document.getElementById('cadastroUsuarios').addEventListener('click', function() {
+    window.location.href = '../Frontend/html/cadastroUsuarios.html'; 
 });
