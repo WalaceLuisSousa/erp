@@ -33,7 +33,4 @@ document.getElementById('login_form').addEventListener('submit', function(event)
     }
 });
 
-// Evento para redirecionar para a página de cadastro
-document.getElementById('cadastroUsuarios').addEventListener('click', function() {
-    window.location.href = '../Frontend/html/cadastroUsuarios.html'; 
-});
+

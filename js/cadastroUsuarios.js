@@ -26,9 +26,7 @@ function adicionarUsuario(event) {
 
         console.log("Usuário criado");
         console.log(`${nomeUsuario} ${emailUsuario} ${senhaUsuario} ${tipoUsuario} `)
-    } else {
-        alert("Usuário não criado. Por favor, preencha todos os campos.");
-    }
+    } 
 }
 
 
