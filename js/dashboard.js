@@ -1,7 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    
-
     let produtos = JSON.parse(localStorage.getItem('produtos')) || [];
 
     document.getElementById('totalProducts').textContent = produtos.length || 0;

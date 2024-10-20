@@ -112,8 +112,3 @@ function resetForm() {
 // Carregar produtos do localStorage ao abrir a página
 document.addEventListener('DOMContentLoaded', listarProdutos);
 
-const usuarioLogado = localStorage.getItem('usuarioLogado');
-
-console.log(`Usuário logado: ${usuarioLogado}`);
-
-document.getElementById('mostrarUsuario').textContent = usuarioLogado || "Usuário não logado";

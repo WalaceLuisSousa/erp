@@ -1,11 +1,6 @@
 // scripts.js
 document.addEventListener('DOMContentLoaded', () => {
 
-    const usuarioLogado = localStorage.getItem('usuarioLogado');
-
-    console.log(`Usuário logado: ${usuarioLogado}`);
-
-    document.getElementById('mostrarUsuario').textContent = usuarioLogado || "Usuário não logado";
 
     // Recuperar clientes e produtos do localStorage
 

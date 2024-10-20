@@ -64,4 +64,5 @@ button:hover {
 .bottons {
     display: flex;
     justify-content: center;
+    text-decoration: none;
 }

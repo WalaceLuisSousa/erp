@@ -1,7 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('usuarioLogin').addEventListener('submit', adicionarUsuario);
-});
-
 function adicionarUsuario(event) {
     event.preventDefault();
 
