@@ -20,7 +20,7 @@ function adicionarUsuario(event) {
         localStorage.setItem('usuarios', JSON.stringify(usuarios));
         limparFormulario();
 
-        console.log("Usuário criado");
+        alert('Usuario criado com sucesso');
         console.log(`${nomeUsuario} ${emailUsuario} ${senhaUsuario} ${tipoUsuario} `)
     } 
 }
