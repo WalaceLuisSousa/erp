@@ -1,41 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Cadastro de Usuários</title>
-    <link rel="stylesheet" href="../css/cadastroUsuario.css">
+    <link rel="stylesheet" href="../css/cadastroUsuario.css" />
 </head>
 <body>
     <div class="container">
         <h1>Cadastro de Usuário</h1>
         <form id="usuarioLogin" action="#" onsubmit="adicionarUsuario(event)">
-            <label for="nome">Nome:</label>
-            <input type="text" id="nomeUsuario" name="nome" required>
-
-            <label for="email">E-mail:</label>
-            <input type="email" id="emailUsuario" name="email" required>
-
-            <label for="senha">Senha:</label>
-            <input type="password" id="senhaUsuario" name="senha" required>
-
-            <label for="confirmar-senha">Confirmar Senha:</label>
-            <input type="password" id="senhaConfirmar" name="confirmar-senha" required>
-
-            <label for="tipoUsuaro">Tipo de Usuario</label>
-            <select id="tipoUsuario" name="tipoUsuaro" required>
-                <option value="admin">administrador</option>
-                <option value="user">Usuario</option>
-            </select>
-            <div class="bottons">
+            <div class="input-group">
+                <label for="nome">Nome</label>
+                <input type="text" id="nomeUsuario" name="nome" required />
+            </div>
+            <div class="input-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="emailUsuario" name="email" required />
+            </div>
+            <div class="input-group">
+                <label for="senha">Senha</label>
+                <input type="password" id="senhaUsuario" name="senha" required />
+            </div>
+            <div class="input-group">
+                <label for="confirmar-senha">Confirmar Senha</label>
+                <input type="password" id="senhaConfirmar" name="confirmar-senha" required />
+            </div>
+            <div class="input-group">
+                <label for="tipoUsuario">Tipo de Usuário</label>
+                <select id="tipoUsuario" name="tipoUsuario" required>
+                    <option value="">Selecione</option>
+                    <option value="admin">Administrador</option>
+                    <option value="user">Usuário</option>
+                </select>
+            </div>
+            <div class="actions">
                 <button type="submit">Cadastrar</button>
+                <a href="../../index.html" class="voltar">Voltar</a>
             </div>
         </form>
-        <a class="bottons" href="../../index.html">
-            <button>Voltar</button>
-        </a>
     </div>
     <script src="../../js/cadastroUsuarios.js"></script>
 </body>
 </html>
-
